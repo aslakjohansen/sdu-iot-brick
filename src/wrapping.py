@@ -28,6 +28,9 @@ def query (g, q):
     r = g.query(q)
     return list(map(lambda row: list(row), r))
 
+def update (g, q):
+    r = g.update(q)
+
 def pprint (structure):
     pretty = json.dumps(structure, sort_keys=True, indent=4, separators=(',', ': '))
     print(pretty)
